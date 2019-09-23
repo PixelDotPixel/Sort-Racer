@@ -106,7 +106,7 @@ namespace Common
             dblTime = time_Elapsed.TotalMilliseconds;
             return dblTime;                                     //Returns by factor of 1000 for seconds
         }
-
+//Timer for insertion sort, returns dblTIme
         public static double timer_Insertion(int[] toSort){
             TimeSpan time_Elapsed;
             Double dblTime;
