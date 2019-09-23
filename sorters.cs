@@ -1,5 +1,6 @@
 using System;
 using System.Net;
+using System.Diagnostics;
 
 namespace sorts
 {
@@ -93,6 +94,68 @@ namespace Common
             toSwap[indexB] = temp;
         }
     }
+    class timers{
+        public static double timer_Bubble(int[] toSort){
+            TimeSpan time_Elapsed;
+            Double dblTime;
+            Stopwatch timer = new Stopwatch();
+            timer.Start();
+            sorts.bubble.bubbleSort(toSort);
+            timer.Stop();
+            time_Elapsed = timer.Elapsed;
+            dblTime = time_Elapsed.TotalMilliseconds;
+            return dblTime;                                     //Returns by factor of 1000 for seconds
+        }
+
+        public static double timer_Insertion(int[] toSort){
+            TimeSpan time_Elapsed;
+            Double dblTime;
+            Stopwatch timer = new Stopwatch();
+            timer.Start();
+            sorts.insertion.insertionSort(toSort);
+            timer.Stop();
+            time_Elapsed = timer.Elapsed;
+            dblTime = time_Elapsed.TotalSeconds;
+            return dblTime;
+        }
+
+        public static double timer_Quick(int[] toSort){
+            TimeSpan time_Elapsed;
+            Double dblTime;
+            Stopwatch timer = new Stopwatch();
+            timer.Start();
+            sorts.Quick.quickSort(toSort);
+            timer.Stop();
+            time_Elapsed = timer.Elapsed;
+            dblTime = time_Elapsed.TotalSeconds;
+            return dblTime;
+            
+        }
+
+        // public static double timer_Merge(int[] toSort){
+        //     // TimeSpan time_Elapsed;
+        //     // Double dblTime;
+        //     // Stopwatch timer = new Stopwatch();
+        //     // timer.Start();
+        //     // sorts.Merge.mergeSort(toSort);
+        //     // timer.Stop();
+        //     // time_Elapsed = stopWatch.Elapsed;
+        //     // dblTime = time_Elapsed.TotalSeconds;
+        //     // return dblTime;
+        // }
+
+        // public static double timer_Heap(int[] toSort){
+        //     // TimeSpan time_Elapsed;
+        //     // Double dblTime;            
+        //     // Stopwatch timer = new Stopwatch();
+        //     // timer.Start();
+        //     // sorts.Heap.heapSort(toSort);
+        //     // timer.Stop();
+        //     // time_Elapsed = stopWatch.Elapsed;
+        //     // dblTime = time_Elapsed.TotalSeconds;
+        //     // return dblTime;
+        // }
+    }
 }
 
 namespace Program
@@ -118,7 +181,8 @@ namespace Program
 
         public static int[] createData(){
             Random r = new Random(Guid.NewGuid().GetHashCode());
-            int size = r.Next() % 49 + 1;
+            int size = //r.Next() % 999 + 1;
+            50000;
             int[] toReturn = new int[size];
             for(int i = 0; i < size; i++){
                 toReturn[i] = r.Next() % 100;
@@ -128,11 +192,11 @@ namespace Program
 
         static void Main(){
             int[] test = createData();
+            double time;
             Console.WriteLine("---Unsorted---");
-            printer(test);
-            test = sorts.Quick.quickSort(test);
+            time = Common.timers.timer_Bubble(test);
             Console.WriteLine("---Sorted---");
-            printer(test);
+            Console.WriteLine("Time to complete: {0}", time/1000);
             tester(test);
         }
     }
