@@ -8,3 +8,6 @@ C:\Users\White Wolf\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\Win
 C:\Users\White Wolf\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
 C:\Users\White Wolf\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\White Wolf\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\White Wolf\Desktop\Projects\C#\Sorts\Git\GUI\GUI\Sort-Racer\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+C:\Users\White Wolf\Desktop\Projects\C#\Sorts\Git\GUI\GUI\Sort-Racer\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\White Wolf\Desktop\Projects\C#\Sorts\Git\GUI\GUI\Sort-Racer\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
